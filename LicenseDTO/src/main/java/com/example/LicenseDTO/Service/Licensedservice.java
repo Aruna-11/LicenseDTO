@@ -1,13 +1,18 @@
 package com.example.LicenseDTO.Service;
 
-import com.example.LicenseDTO.DTO.LicenseDTO;
+import java.util.Map;
 
 public interface Licensedservice {
+	
+	
+	boolean isValidEmail(String organizationEmail);
+	boolean isValidLicenseKey(String licenseKey);
+	
+	
 
-	String getlicense(String lisenceKey);
-	
-	LicenseDTO create(LicenseDTO licenseDTO);
-	
+	Map<String, String> activateLicense(String licenseKey);
+	String checkAndActivate(String licenseKey, String organizationEmail);
+	 
 	
 
 }
